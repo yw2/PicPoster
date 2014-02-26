@@ -1,5 +1,8 @@
 package ca.ualberta.cs.picposter;
 
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -76,6 +79,9 @@ public class PicPosterActivity extends Activity {
 	public void searchPosts(View view) {
 		String searchTerm = this.searchPostsEditText.getText().toString();
 		
+		HttpPost searchRequest = new HttpPost("http://cmput301.softwareprocess.es:8080/testing/yw2/1/_search?"+searchTerm);
+		String query = 	"{\"query\" : {\"query_string\" : {\"default_field\" : \"ingredients\",\"query\" : \"" http://cmput301.softwareprocess.es:8080/testing/yw2/1 "\"}}}";
+		StringEntity stringentity = new StringEntity(query);
 		//TODO : perform search, update model, etc
 		
 		this.searchPostsEditText.setText(null);
