@@ -16,6 +16,7 @@ import ca.ualberta.cs.picposter.controller.PicPosterController;
 import ca.ualberta.cs.picposter.model.PicPosterModelList;
 import ca.ualberta.cs.picposter.view.PicPostModelAdapter;
 
+/** This is a sample activity.*/
 public class PicPosterActivity extends Activity {
 
 
@@ -80,8 +81,8 @@ public class PicPosterActivity extends Activity {
 		String searchTerm = this.searchPostsEditText.getText().toString();
 		
 		HttpPost searchRequest = new HttpPost("http://cmput301.softwareprocess.es:8080/testing/yw2/1/_search?"+searchTerm);
-		String query = 	"{\"query\" : {\"query_string\" : {\"default_field\" : \"ingredients\",\"query\" : \"" http://cmput301.softwareprocess.es:8080/testing/yw2/1 "\"}}}";
-		StringEntity stringentity = new StringEntity(query);
+	//	String query = 	"{\"query\" : {\"query_string\" : {\"default_field\" : \"ingredients\",\"query\" : \"" http://cmput301.softwareprocess.es:8080/testing/yw2/1 "\"}}}";
+	//	StringEntity stringentity = new StringEntity(query);
 		//TODO : perform search, update model, etc
 		
 		this.searchPostsEditText.setText(null);
